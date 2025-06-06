@@ -1,4 +1,5 @@
-
+import dotenv from "dotenv";
+dotenv.config();
 
 // serverorder.js
 import express from "express";
@@ -7,7 +8,7 @@ import btoa from "btoa";
 //import fetch from 'node-fetch';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
